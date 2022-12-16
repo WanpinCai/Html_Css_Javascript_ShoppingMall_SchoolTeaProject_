@@ -211,7 +211,6 @@ header {
 }
 #slider #prev:hover, #slider #next:hover {
   background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 0;
 }
 #slider #prev {
   left: 10px;
@@ -219,6 +218,8 @@ header {
 #slider #next {
   right: 10px;
 }
+
+
 
 .c_OurHistory {
   background-color:#F7FFF3;
@@ -414,17 +415,8 @@ header {
 }
 
 
-/** Order Detail (Sewoong) **/
-html {
-    font-size: 10px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-html {
-    font-family: sans-serif;
-    -webkit-text-size-adjust: 100%;
-	box-sizing: border-box;
-}
 
+/** Order Detail (Sewoong) **/
 .f_main{
     position: relative;
     display: flex;
@@ -436,9 +428,15 @@ html {
     border: 0 solid rgba(0,0,0,.125);
     border-radius: 1rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+	margin: 0;
 	
 }
-table {
+.f_table table-borderless {
     
     border-collapse: collapse;
 	width: 100%;
@@ -449,52 +447,41 @@ table {
     border-spacing: 2px;
 }
 
-tbody {
+.f_tbody {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
 }
 
-tr {
+.f_tr {
     display: table-row;
     vertical-align: inherit;
     border-color: inherit;
 }
 
-td {
+.f_td {
     padding: 8px;
     /* line-height: 1.42857143; */
     vertical-align: top;
     border-top: 1px solid #ddd;
 }
 
-tfoot {
+.f_text-end{
+    padding: 8px;
+    /* line-height: 1.42857143; */
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.f_tfoot {
     display: table-footer-group;
     vertical-align: middle;
     border-color: inherit;
 }
 
-a{
+.f_text-reset{
 	color: #699352;
 }
-
-p {
-    margin: 0 0 10px;
-}
-
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
-    background-color: #fff;
-	
-}
-
-body {
-    margin: 0;
-}
-
 .f_container {
     /* padding-right: 15px; */
 	padding-right: 15px;
@@ -503,13 +490,12 @@ body {
     margin-left: auto;
 	width: 1170px;
 }
-}
 
 .f_badge {
     background-color: #dff0d8;
 }
 
-.bg-success{
+.f_badge{
 	display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
@@ -531,7 +517,7 @@ body {
     left: 10px;
 }
 
-h2{
+.f_h2{
 	font-size: 30px;
 	margin-top: 20px;
     margin-bottom: 10px;
@@ -554,6 +540,8 @@ h2{
 
 
 
+
+
 /** Product List (Sewoong) **/
 .e_main{
 	background-color: #f7fff3;
@@ -564,7 +552,7 @@ h2{
   font-size: 22px;
 }
 
-img{
+.e_img{
 	aspect-ratio: 16/12;
 	
 }
@@ -1034,6 +1022,8 @@ img{
 }
 
 
+
+
 /** Product Detail (Wanpin) **/
 .g_product-container{
     max-width:1200px;
@@ -1168,13 +1158,10 @@ img{
   flex: 25%;
 }
 
-.d_col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
+
 
 .d_col-75 {
-  -ms-flex: 75%; /* IE10 */
+  
   flex: 75%;
 }
 
@@ -1185,21 +1172,25 @@ img{
 }
 
 .d_container {
-  background-color: #f2f2f2;
+  background-color: mintcream;
   padding: 5px 20px 15px 20px;
   border: 1px solid lightgrey;
-  border-radius: 3px;
-}
+  border-radius: 5px;
+  height:700px;
+ position:relative;
+ margin:50px;
+ padding:20px;
 
-input {
+}
+.d_input {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid;
   border-radius: 3px;
 }
 
-label {
+.d_label {
   margin-bottom: 10px;
   display: block;
 }
@@ -1224,7 +1215,6 @@ label {
 
 
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
   .d_row {
     flex-direction: column-reverse;
@@ -1233,28 +1223,33 @@ label {
 }
 
 
-select{
+.d_code-dropdown{
 	 appearance: none;
         outline: 0;
-        background: aqua;
+        color: aqua;
       
-        width: 30%;
+        width: 20%;
         height: 100%;
-        color: grey;
+        color: gray;
         cursor: pointer;
-        border: 1px solid black;
-        border-radius: 3px;
+        border: 1px solid aqua;
 		position:relative;
-		top:-2px;
+		top:-10px;
 		left: 700px;
 }
 
-button{
-	width:100%;
-	background-color:#699352;
+.d_button{
+	
+	background-color: #699352;
+	width:80%;
+	position:relative;
+	right: 0px;
+	bottom:0px;
+
+	color:white;
+	font-family: cursive;
+	border:1px solid black;
 }
-
-
 
 
 /** Register (Mihoko) **/
